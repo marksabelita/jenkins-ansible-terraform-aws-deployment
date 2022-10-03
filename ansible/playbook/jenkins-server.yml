@@ -1,0 +1,11 @@
+- hosts: jenkins
+  remote_user: true
+  become: yes
+  gather_facts: no # important
+  tasks:
+    - name: Wait for system to become reachable
+      wait_for_connection:
+  roles:
+    - jenkins
+    - terraform
+    - ansible

@@ -1,0 +1,10 @@
+variable instance_type {}
+variable public_key_location {}
+variable instance_owner {}
+variable instance_name {}
+variable virtualization_type {}
+variable subnets {}
+variable availability_zone {}
+variable security_group_id {}
+variable env_prefix {}
+variable project {}

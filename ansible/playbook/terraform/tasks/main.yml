@@ -1,0 +1,19 @@
+---
+# tasks file for terraform
+- name: Yum Install Packages
+  yum: name={{item}} state=latest
+  with_items:
+     - yum-utils
+
+- name: Add terraform repository
+  shell: yum-config-manager --add-repo=https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+
+- name: yum update
+  yum:
+    name: '*'
+    state: latest
+
+- name: Install terraform
+  yum:
+    name: terraform
+    state: installed

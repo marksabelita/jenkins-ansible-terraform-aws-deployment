@@ -1,0 +1,13 @@
+vpc_cdir_block = "10.0.0.0/16"
+subnet_cidr_block = "10.0.10.0/24"
+region = "eu-west-1"
+availability_zone = "eu-west-1a"
+env_prefix = "development"
+project = "jenkins"
+
+instance_type="t2.micro"
+instance_owner="679593333241"
+instance_name="CentOS-7-2111-20220825_1.x86_64-*"
+virtualization_type="hvm"
+public_key_location="/Users/macbook/.ssh/id_rsa.pub"
+private_key_location="/Users/macbook/.ssh/id_rsa"

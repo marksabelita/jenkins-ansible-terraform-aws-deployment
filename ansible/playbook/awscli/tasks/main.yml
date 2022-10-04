@@ -1,0 +1,23 @@
+---
+- name: Yum Install Packages
+  yum: name={{item}} state=latest
+  with_items:
+    - curl
+    - unzip
+
+- name: Download AWS CLI V2
+  get_url: 
+    url: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+    dest: /usr/local/src/awscliv2.zip
+    mode: 0777
+
+- name: Unzip AWS CLI V2
+  unarchive: 
+    src: /usr/local/src/awscliv2.zip
+    dest: '/usr/local/src/'
+    remote_src: yes
+  
+- name: Install awscli package.
+  shell: /usr/local/src/./aws/install
+  args:
+    creates: /usr/local/bin/aws

@@ -11,3 +11,7 @@ variable public_key_location {}
 variable private_key_location {}
 variable instance_name {}
 variable virtualization_type {}
+
+variable aws_profile {}
+variable aws_access_key {}
+variable aws_secret_key {}

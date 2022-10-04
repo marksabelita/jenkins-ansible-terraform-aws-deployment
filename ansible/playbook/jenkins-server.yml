@@ -6,6 +6,8 @@
     - name: Wait for system to become reachable
       wait_for_connection:
   roles:
+    - awscli
     - jenkins
     - terraform
     - ansible
+    
